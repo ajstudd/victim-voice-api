@@ -63,10 +63,10 @@ app.post('/auth/send-otp', async (req, res) => {
 
   try {
     // Send OTP using Twilio
-    // const twilioResponse = await sendMessage(message, phoneNumber);
-    // if (twilioResponse.status !== 'accepted') throw new Error('Failed to send OTP');
+    const twilioResponse = await sendMessage(message, phoneNumber);
+    if (twilioResponse.status !== 'accepted') throw new Error('Failed to send OTP');
 
-    const otp = 123456; // For testing purposes, use a fixed OTP
+    // const otp = 123456; // For testing purposes, use a fixed OTP
 
     // Save OTP to the database with expiry
     await otpCollection.insertOne({
