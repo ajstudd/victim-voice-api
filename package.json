@@ -1,14 +1,13 @@
 {
-  "name": "lost-and-found-api",
+  "name": "victim-voice-api",
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
     "start": "node build/server.js",
-    "build": "npm run prettier && npm run lint && tsc",
+    "build": "npm run lint && tsc",
     "dev": "nodemon",
     "lint": "eslint --ext .ts src/",
     "lint:fix": "eslint --ext .ts src/ --fix",
-    "prettier": "prettier --write .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
