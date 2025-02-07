@@ -2,14 +2,14 @@
   "name": "victim-voice-api",
   "version": "1.0.0",
   "main": "server.js",
-  "scripts": {
-    "start": "node build/server.js",
-    "build": "tsc",
-    "dev": "nodemon",
-    "lint": "eslint --ext .ts src/",
-    "lint:fix": "eslint --ext .ts src/ --fix",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+"scripts": {
+  "start": "node server.js",
+  "build": "", 
+  "dev": "nodemon server.js",
+  "lint": "eslint --ext .js src/",
+  "lint:fix": "eslint --ext .js src/ --fix",
+  "test": "echo \"Error: no test specified\" && exit 1"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -26,11 +26,10 @@
     "twilio": "^5.3.5"
   },
   "husky": {
-  "hooks": {
-    "pre-commit": "npm run lint"
-  }
-}
-,
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
   "devDependencies": {
     "eslint": "^9.19.0",
     "husky": "^9.1.7"
