@@ -48,6 +48,9 @@ const authenticateJWT = (req, res, next) => {
   }
 };
 
+app.get('/', (req, res) => {
+  res.send('Welcome to the Harassment Reporting API');
+});
 // Example usage of middleware
 app.get('/protected-route', authenticateJWT, (req, res) => {
   res.json({ message: 'Access to protected route granted' });
